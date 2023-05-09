@@ -29,12 +29,37 @@ body {
   border-radius: 30px;
 }
 
+.low-priority {
+  border-color: #19963f !important;
+}
+
+.middle-priority {
+  border-color: #d3d00e !important;
+}
+
+.high-priority {
+  border-color: #d31515 !important;
+}
+
+.low-priority > .body {
+  border-color: #19963f !important;
+}
+
+.middle-priority > .body {
+  border-color: #d3d00e !important;
+}
+
+.high-priority > .body {
+  border-color: #d31515 !important;
+}
+
+
 .wish {
   width: 20rem;
   height: 15rem;
   border-radius: 15px;
-  background: rgb(119, 119, 119);
-  border: 2px solid #0f6328;
+  background: rgb(92, 92, 92);
+  border: 2px solid;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -43,33 +68,98 @@ body {
 
 .wish > .header {
       width: 100%;
-      height: 1em;
-      display: flex;
+      height: 15%;
       border-radius: 15px 15px 0 0;
+      text-align: right;
   }
+
+  .options {
+    margin: 1% 3% 0 0;
+    color: rgb(224, 224, 224);
+    font-size: 20pt;
+    cursor: pointer;
+  }
+  
 
 .wish > .name {
       width: 100%;
-      height: 4em;
+      height: 35%;
+      line-height: 84px;
       text-align: center;
-      color: rgb(255, 255, 255);
-      font-size: 17pt;
+      color: rgb(224, 224, 224);
+      font-size: 20pt;
       overflow: hidden;
-      background: #292929;
+      background: #3d3d3d;
+      border-bottom: 2px solid;
+      border-color: inherit;
+}
+
+.wish > .name > span {
+  max-height: 80%;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 24pt;
 }
 
   .wish > .body {
-    background: linear-gradient(0deg, rgba(9,121,63,1) 85%, rgba(20,155,184,1) 15%);
-    width: 100%;
-      height: 150px;
-      padding: 0;
-      border-radius: 0 0 30px 30px;
+    background: rgb(92, 92, 92);
+    width: 90%;
+    height: 40%;
+    position: relative;
+    padding: 5%;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.wishname {
-  text-align: center;
-  margin: auto;
-  color: rgb(2,0,36);
-  font-size: 17pt;
+.price {
+  color: rgb(224, 224, 224);
+  font-size: 24pt;
+}
+
+.category {
+  color: rgb(224, 224, 224);
+  font-size: 20pt;
+  display: flex;
+}
+
+.category-name {
+  font-size: 24pt;
+  text-decoration: underline;
+  cursor: pointer;
+  text-overflow: ellipsis;
   overflow: hidden;
+  margin-left: 2%;
+}
+
+.triangle {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top-color: inherit !important;
+  border-bottom: solid 29px transparent;
+  border-top: solid 29px;
+  border-left: solid 29px transparent;
+  border-right: solid 29px transparent;
+  cursor: pointer;
+}
+
+.triangle:before {
+  content: "";
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  border-bottom: solid 28px transparent;
+  border-top: solid 28px #3d3d3d;
+  border-left: solid 28px transparent;
+  border-right: solid 28px transparent;
+  top: -31px;
+  left: -28px;
 }
