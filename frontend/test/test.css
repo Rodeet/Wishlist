@@ -117,8 +117,12 @@ body {
 }
 
 .price {
+  max-width: 80%;
   color: rgb(224, 224, 224);
   font-size: 24pt;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .category {
